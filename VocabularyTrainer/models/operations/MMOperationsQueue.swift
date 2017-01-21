@@ -1,17 +1,12 @@
-//
-// Created by MIGUEL MOLDES on 13/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 
-class REDOperationsQueue : NSObject {
+class MMOperationsQueue : NSObject {
 
     private var operationsQueue = OperationQueue()
-    private var operationsList = [REDOperationProtocol]()
+    private var operationsList = [MMOperationProtocol]()
     var completionBlock: (() -> ())?
 
-    func addOperations(operations: [REDOperationProtocol]) {
+    func addOperations(operations: [MMOperationProtocol]) {
         var list = [Operation]()
         for operation in operations {
             addOperation(operation: operation)
@@ -21,7 +16,7 @@ class REDOperationsQueue : NSObject {
         operationsQueue.addOperations(list, waitUntilFinished: false)
     }
 
-    private func addOperation(operation:REDOperationProtocol) {
+    private func addOperation(operation:MMOperationProtocol) {
         operationsList.append(operation)
         operation.operation.addObserver(self, forKeyPath: "isCancelled", options:[.new, .old], context: nil)
         let allDependencies = operation.dependencies + operation.successDependencies
@@ -43,13 +38,13 @@ class REDOperationsQueue : NSObject {
                     switch keyPath! {
                     case "isCancelled":
                         if let operation = object as? Operation {
-                            for translationOperation in self.operationsList {
-                                if translationOperation.operation == operation {
+                            for operationQueued in self.operationsList {
+                                if operationQueued.operation == operation {
                                     continue
                                 }
-                                for dependency in translationOperation.successDependencies {
+                                for dependency in operationQueued.successDependencies {
                                     if dependency.operation == operation {
-                                        translationOperation.operation.cancel()
+                                        operationQueued.operation.cancel()
                                     }
                                 }
                             }

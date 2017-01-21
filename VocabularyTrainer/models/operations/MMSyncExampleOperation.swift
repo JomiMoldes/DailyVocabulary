@@ -1,11 +1,6 @@
-//
-// Created by MIGUEL MOLDES on 13/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 
-class REDSyncTestOperation : MMOperationProtocol {
+class MMSyncExampleOperation : MMOperationProtocol {
 
     var operation: Operation
 
@@ -18,7 +13,6 @@ class REDSyncTestOperation : MMOperationProtocol {
     }
 
     func execute() {
-        print("REDSyncTestOperation execute")
-//        self.operation.cancel()
+        print("execute your code here")
     }
 }

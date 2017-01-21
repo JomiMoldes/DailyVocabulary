@@ -7,15 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		45BAF1E6089F26859718F845 /* REDFetchTranslationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF306B851DD0C52853343 /* REDFetchTranslationOperation.swift */; };
-		45BAF2D2F77842BE058172C9 /* REDAsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFA7EDAC1ED1D90307DA9 /* REDAsynchronousOperation.swift */; };
-		45BAF4B7ED25ADFAECE29765 /* REDOperationsQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF676DD7DBDFB365EAB95 /* REDOperationsQueueTest.swift */; };
-		45BAF622766548E942BEA7D8 /* REDSyncTestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF4CDBAE8E9E0B673AC7D /* REDSyncTestOperation.swift */; };
-		45BAF7E6AE6EB9C3B8EFC0A8 /* REDOperationsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFD1F17A56C9716AB019B /* REDOperationsQueue.swift */; };
-		45BAFBB3C045AA01D6D5F171 /* REDOperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF9DBBD6CCAA176A1794C /* REDOperationProtocol.swift */; };
-		45BAFD2E1586C3B981E30CE1 /* REDOperationsQueueFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFEAB65B9E8C2EBF6FAE7 /* REDOperationsQueueFake.swift */; };
 		45BAFD81FD0421DF93906D02 /* REDWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFE32E71F846E83A43472 /* REDWord.swift */; };
-		45BAFF8A3992B6D81FC8384D /* REDSyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF0E8A815778DD9694433 /* REDSyncOperation.swift */; };
+		486C6B4B1E325A7400F85011 /* MMOperationsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B451E325A7400F85011 /* MMOperationsQueue.swift */; };
+		486C6B4C1E325A7400F85011 /* MMAsynchronousExampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */; };
+		486C6B4D1E325A7400F85011 /* MMAsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B471E325A7400F85011 /* MMAsynchronousOperation.swift */; };
+		486C6B4E1E325A7400F85011 /* MMOperationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B481E325A7400F85011 /* MMOperationProtocol.swift */; };
+		486C6B4F1E325A7400F85011 /* MMSyncExampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B491E325A7400F85011 /* MMSyncExampleOperation.swift */; };
+		486C6B501E325A7400F85011 /* MMSyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B4A1E325A7400F85011 /* MMSyncOperation.swift */; };
+		486C6B531E325AA200F85011 /* MMOperationsQueueFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B511E325AA200F85011 /* MMOperationsQueueFake.swift */; };
+		486C6B541E325AA200F85011 /* MMOperationsQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B521E325AA200F85011 /* MMOperationsQueueTest.swift */; };
+		486C6B571E325AF500F85011 /* REDFetchTranslationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B551E325AF500F85011 /* REDFetchTranslationOperation.swift */; };
+		486C6B581E325AF500F85011 /* REDSyncTestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B561E325AF500F85011 /* REDSyncTestOperation.swift */; };
+		486C6B5A1E33B1C700F85011 /* REDInputWordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486C6B591E33B1C700F85011 /* REDInputWordView.xib */; };
+		486C6B5C1E33B1EF00F85011 /* REDInputWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5B1E33B1EF00F85011 /* REDInputWordViewController.swift */; };
+		486C6B5E1E33B22600F85011 /* REDInputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5D1E33B22600F85011 /* REDInputWordView.swift */; };
+		486C6B601E33B25F00F85011 /* RedInputWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */; };
 		4888032A1E23FD8F00DAA55E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488803291E23FD8F00DAA55E /* AppDelegate.swift */; };
 		4888032C1E23FD8F00DAA55E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888032B1E23FD8F00DAA55E /* ViewController.swift */; };
 		4888032F1E23FD8F00DAA55E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4888032D1E23FD8F00DAA55E /* Main.storyboard */; };
@@ -37,15 +43,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		45BAF0E8A815778DD9694433 /* REDSyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDSyncOperation.swift; sourceTree = "<group>"; };
-		45BAF306B851DD0C52853343 /* REDFetchTranslationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDFetchTranslationOperation.swift; sourceTree = "<group>"; };
-		45BAF4CDBAE8E9E0B673AC7D /* REDSyncTestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDSyncTestOperation.swift; sourceTree = "<group>"; };
-		45BAF676DD7DBDFB365EAB95 /* REDOperationsQueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDOperationsQueueTest.swift; sourceTree = "<group>"; };
-		45BAF9DBBD6CCAA176A1794C /* REDOperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDOperationProtocol.swift; sourceTree = "<group>"; };
-		45BAFA7EDAC1ED1D90307DA9 /* REDAsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDAsynchronousOperation.swift; sourceTree = "<group>"; };
-		45BAFD1F17A56C9716AB019B /* REDOperationsQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDOperationsQueue.swift; sourceTree = "<group>"; };
 		45BAFE32E71F846E83A43472 /* REDWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDWord.swift; sourceTree = "<group>"; };
-		45BAFEAB65B9E8C2EBF6FAE7 /* REDOperationsQueueFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDOperationsQueueFake.swift; sourceTree = "<group>"; };
+		486C6B451E325A7400F85011 /* MMOperationsQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationsQueue.swift; sourceTree = "<group>"; };
+		486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAsynchronousExampleOperation.swift; sourceTree = "<group>"; };
+		486C6B471E325A7400F85011 /* MMAsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAsynchronousOperation.swift; sourceTree = "<group>"; };
+		486C6B481E325A7400F85011 /* MMOperationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationProtocol.swift; sourceTree = "<group>"; };
+		486C6B491E325A7400F85011 /* MMSyncExampleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSyncExampleOperation.swift; sourceTree = "<group>"; };
+		486C6B4A1E325A7400F85011 /* MMSyncOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMSyncOperation.swift; sourceTree = "<group>"; };
+		486C6B511E325AA200F85011 /* MMOperationsQueueFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationsQueueFake.swift; sourceTree = "<group>"; };
+		486C6B521E325AA200F85011 /* MMOperationsQueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationsQueueTest.swift; sourceTree = "<group>"; };
+		486C6B551E325AF500F85011 /* REDFetchTranslationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDFetchTranslationOperation.swift; sourceTree = "<group>"; };
+		486C6B561E325AF500F85011 /* REDSyncTestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDSyncTestOperation.swift; sourceTree = "<group>"; };
+		486C6B591E33B1C700F85011 /* REDInputWordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REDInputWordView.xib; sourceTree = "<group>"; };
+		486C6B5B1E33B1EF00F85011 /* REDInputWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordViewController.swift; sourceTree = "<group>"; };
+		486C6B5D1E33B22600F85011 /* REDInputWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordView.swift; sourceTree = "<group>"; };
+		486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedInputWordViewModel.swift; sourceTree = "<group>"; };
 		488803261E23FD8F00DAA55E /* VocabularyTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488803291E23FD8F00DAA55E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4888032B1E23FD8F00DAA55E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,32 +101,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		45BAF2E5F0875D3552F59105 /* operations */ = {
+		45BAF6950780F16D5EBCB1C9 /* operations */ = {
 			isa = PBXGroup;
 			children = (
-				45BAF306B851DD0C52853343 /* REDFetchTranslationOperation.swift */,
-				45BAFA7EDAC1ED1D90307DA9 /* REDAsynchronousOperation.swift */,
-				45BAFD1F17A56C9716AB019B /* REDOperationsQueue.swift */,
-				45BAF9DBBD6CCAA176A1794C /* REDOperationProtocol.swift */,
-				45BAF4CDBAE8E9E0B673AC7D /* REDSyncTestOperation.swift */,
-				45BAF0E8A815778DD9694433 /* REDSyncOperation.swift */,
+				486C6B511E325AA200F85011 /* MMOperationsQueueFake.swift */,
+				486C6B521E325AA200F85011 /* MMOperationsQueueTest.swift */,
 			);
 			path = operations;
+			sourceTree = "<group>";
+		};
+		45BAF69F722250B8F5FB15F6 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				486C6B591E33B1C700F85011 /* REDInputWordView.xib */,
+				486C6B5D1E33B22600F85011 /* REDInputWordView.swift */,
+				486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */,
+			);
+			path = views;
 			sourceTree = "<group>";
 		};
 		45BAF6D7F35D5AF3302C8B71 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				45BAFD7619777F641D0081FE /* operations */,
+				45BAF6950780F16D5EBCB1C9 /* operations */,
 			);
 			path = models;
 			sourceTree = "<group>";
 		};
-		45BAFD7619777F641D0081FE /* operations */ = {
+		45BAF954689243DAF1E54158 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				45BAF676DD7DBDFB365EAB95 /* REDOperationsQueueTest.swift */,
-				45BAFEAB65B9E8C2EBF6FAE7 /* REDOperationsQueueFake.swift */,
+				486C6B5B1E33B1EF00F85011 /* REDInputWordViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		45BAFA8D7D173C8FAF236268 /* operations */ = {
+			isa = PBXGroup;
+			children = (
+				486C6B551E325AF500F85011 /* REDFetchTranslationOperation.swift */,
+				486C6B561E325AF500F85011 /* REDSyncTestOperation.swift */,
+				486C6B451E325A7400F85011 /* MMOperationsQueue.swift */,
+				486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */,
+				486C6B471E325A7400F85011 /* MMAsynchronousOperation.swift */,
+				486C6B481E325A7400F85011 /* MMOperationProtocol.swift */,
+				486C6B491E325A7400F85011 /* MMSyncExampleOperation.swift */,
+				486C6B4A1E325A7400F85011 /* MMSyncOperation.swift */,
 			);
 			path = operations;
 			sourceTree = "<group>";
@@ -123,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				45BAFE32E71F846E83A43472 /* REDWord.swift */,
-				45BAF2E5F0875D3552F59105 /* operations */,
+				45BAFA8D7D173C8FAF236268 /* operations */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -159,6 +191,8 @@
 				488803381E23FD8F00DAA55E /* Info.plist */,
 				488803301E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodeld */,
 				45BAFE61A90094A76575A15F /* models */,
+				45BAF69F722250B8F5FB15F6 /* views */,
+				45BAF954689243DAF1E54158 /* controllers */,
 			);
 			path = VocabularyTrainer;
 			sourceTree = "<group>";
@@ -273,6 +307,7 @@
 				488803371E23FD8F00DAA55E /* LaunchScreen.storyboard in Resources */,
 				488803341E23FD8F00DAA55E /* Assets.xcassets in Resources */,
 				4888032F1E23FD8F00DAA55E /* Main.storyboard in Resources */,
+				486C6B5A1E33B1C700F85011 /* REDInputWordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,15 +374,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				4888032C1E23FD8F00DAA55E /* ViewController.swift in Sources */,
+				486C6B5E1E33B22600F85011 /* REDInputWordView.swift in Sources */,
+				486C6B4E1E325A7400F85011 /* MMOperationProtocol.swift in Sources */,
+				486C6B4B1E325A7400F85011 /* MMOperationsQueue.swift in Sources */,
+				486C6B571E325AF500F85011 /* REDFetchTranslationOperation.swift in Sources */,
+				486C6B4F1E325A7400F85011 /* MMSyncExampleOperation.swift in Sources */,
+				486C6B501E325A7400F85011 /* MMSyncOperation.swift in Sources */,
+				486C6B5C1E33B1EF00F85011 /* REDInputWordViewController.swift in Sources */,
+				486C6B601E33B25F00F85011 /* RedInputWordViewModel.swift in Sources */,
+				486C6B4C1E325A7400F85011 /* MMAsynchronousExampleOperation.swift in Sources */,
 				4888032A1E23FD8F00DAA55E /* AppDelegate.swift in Sources */,
+				486C6B4D1E325A7400F85011 /* MMAsynchronousOperation.swift in Sources */,
 				488803321E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodeld in Sources */,
+				486C6B581E325AF500F85011 /* REDSyncTestOperation.swift in Sources */,
 				45BAFD81FD0421DF93906D02 /* REDWord.swift in Sources */,
-				45BAF1E6089F26859718F845 /* REDFetchTranslationOperation.swift in Sources */,
-				45BAF2D2F77842BE058172C9 /* REDAsynchronousOperation.swift in Sources */,
-				45BAF7E6AE6EB9C3B8EFC0A8 /* REDOperationsQueue.swift in Sources */,
-				45BAFBB3C045AA01D6D5F171 /* REDOperationProtocol.swift in Sources */,
-				45BAF622766548E942BEA7D8 /* REDSyncTestOperation.swift in Sources */,
-				45BAFF8A3992B6D81FC8384D /* REDSyncOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,9 +395,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				486C6B541E325AA200F85011 /* MMOperationsQueueTest.swift in Sources */,
+				486C6B531E325AA200F85011 /* MMOperationsQueueFake.swift in Sources */,
 				488803421E23FD9000DAA55E /* VocabularyTrainerTests.swift in Sources */,
-				45BAF4B7ED25ADFAECE29765 /* REDOperationsQueueTest.swift in Sources */,
-				45BAFD2E1586C3B981E30CE1 /* REDOperationsQueueFake.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

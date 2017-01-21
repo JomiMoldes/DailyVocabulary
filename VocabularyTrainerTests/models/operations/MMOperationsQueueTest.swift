@@ -1,20 +1,15 @@
-//
-// Created by MIGUEL MOLDES on 14/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 import XCTest
 
 @testable import VocabularyTrainer
 
-class REDOperationsQueueTest : XCTestCase {
+class MMOperationsQueueTest : XCTestCase {
 
-    var operationQueue : REDOperationsQueueFake!
+    var operationQueue : MMOperationsQueueFake!
 
     override func setUp() {
         super.setUp()
-        self.operationQueue = REDOperationsQueueFake()
+        self.operationQueue = MMOperationsQueueFake()
     }
 
     override func tearDown() {
@@ -35,7 +30,7 @@ class REDOperationsQueueTest : XCTestCase {
         let op6 = FakeSyncOperation(name:"testDependSync",cancel:false)!
         op6.dependencies = [op5]
 
-        let asyncExpectation = expectation(description: "operation 1 depends on operation 2")
+        let asyncExpectation = expectation(description: "operations depending")
         operationQueue.completionExpectation = asyncExpectation
 
         operationQueue.addOperations(operations: [op1, op2, op3, op4, op5, op6])
@@ -64,11 +59,11 @@ class REDOperationsQueueTest : XCTestCase {
 
 }
 
-class FakeAsynchronousOperation : REDOperationProtocol {
+class FakeAsynchronousOperation : MMOperationProtocol {
 
     var operation: Operation
-    var dependencies = [REDOperationProtocol]()
-    var successDependencies = [REDOperationProtocol]()
+    var dependencies = [MMOperationProtocol]()
+    var successDependencies = [MMOperationProtocol]()
 
     var cancel = false
     var done = false
@@ -79,8 +74,8 @@ class FakeAsynchronousOperation : REDOperationProtocol {
 
     init?(name:String, cancel : Bool) {
         self.name = name
-        operation = REDAsynchronousOperation()
-        (operation as! REDAsynchronousOperation).delegate = self
+        operation = MMAsynchronousOperation()
+        (operation as! MMAsynchronousOperation).delegate = self
         self.cancel = cancel
     }
 
@@ -89,7 +84,7 @@ class FakeAsynchronousOperation : REDOperationProtocol {
         if self.cancel || operation.isCancelled {
             self.endTime = Date()
             operation.cancel()
-            (operation as! REDAsynchronousOperation).finishOperation()
+            (operation as! MMAsynchronousOperation).finishOperation()
             return
         }
 
@@ -97,17 +92,17 @@ class FakeAsynchronousOperation : REDOperationProtocol {
         DispatchQueue.global(qos: .background).asyncAfter(deadline: deadlineTime) {
                     self.done = true
                     self.endTime = Date()
-                    (self.operation as! REDAsynchronousOperation).finishOperation()
+                    (self.operation as! MMAsynchronousOperation).finishOperation()
                 }
     }
 
 }
 
-class FakeSyncOperation : REDOperationProtocol {
+class FakeSyncOperation : MMOperationProtocol {
 
     var operation: Operation
-    var dependencies = [REDOperationProtocol]()
-    var successDependencies = [REDOperationProtocol]()
+    var dependencies = [MMOperationProtocol]()
+    var successDependencies = [MMOperationProtocol]()
 
     var cancel = false
     var done = false
@@ -119,8 +114,8 @@ class FakeSyncOperation : REDOperationProtocol {
 
     init?(name:String, cancel : Bool) {
         self.name = name
-        operation = REDSyncOperation()
-        (operation as! REDSyncOperation).delegate = self
+        operation = MMSyncOperation()
+        (operation as! MMSyncOperation).delegate = self
         self.cancel = cancel
     }
 

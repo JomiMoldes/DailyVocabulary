@@ -1,32 +1,19 @@
-//
-// Created by MIGUEL MOLDES on 11/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 
-class REDFetchTranslationOperation : MMOperationProtocol {
+class MMAsynchronousExampleOperation : MMOperationProtocol {
 
     var operation: Operation
-
-    let word : String
-    let defaultLanguage : String
-    let fallbackLanguage : String
-    var translation : String?
 
     var dependencies = [MMOperationProtocol]()
     var successDependencies = [MMOperationProtocol]()
 
-    init?(word:String, defaultLanguage:String, fallbackLanguage:String){
-        self.word = word
-        self.defaultLanguage = defaultLanguage
-        self.fallbackLanguage = fallbackLanguage
+    init?(){
         self.operation = MMAsynchronousOperation()
         (self.operation as! MMAsynchronousOperation).delegate = self
     }
 
     func execute() {
-        let url = URL(string:"http://api.ultralingua.com/api/definitions/\(self.defaultLanguage)/\(self.fallbackLanguage)/\(self.word)")!
+        let url = URL(string:"http://api.ultralingua.com/api/definitions/de/en/laufen")!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             guard error == nil else {
@@ -45,7 +32,6 @@ class REDFetchTranslationOperation : MMOperationProtocol {
 
             _ = try? JSONSerialization.jsonObject(with: data, options:[])
 
-            print("json")
             (self.operation as! MMAsynchronousOperation).finishOperation()
         }
 

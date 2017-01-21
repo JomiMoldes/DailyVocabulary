@@ -5,6 +5,10 @@
 ## Build generated
 build/
 DerivedData/
+.idea/
+VocabularyTrainer/models/operations/.DS_Store
+VocabularyTrainerTests/.DS_Store
+VocabularyTrainerTests/models/.DS_Store
 
 ## Various settings
 *.pbxuser

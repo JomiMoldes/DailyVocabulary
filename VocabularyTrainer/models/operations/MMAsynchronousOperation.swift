@@ -1,8 +1,8 @@
 import Foundation
 
-class REDAsynchronousOperation : Operation {
+class MMAsynchronousOperation : Operation {
 
-    weak var delegate:REDOperationProtocol?
+    weak var delegate:MMOperationProtocol?
 
     enum State {
         case Ready, Executing, Finished

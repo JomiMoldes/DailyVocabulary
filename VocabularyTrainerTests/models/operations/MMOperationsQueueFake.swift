@@ -1,18 +1,13 @@
-//
-// Created by MIGUEL MOLDES on 14/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 import XCTest
 
 @testable import VocabularyTrainer
 
-class REDOperationsQueueFake : REDOperationsQueue {
+class MMOperationsQueueFake : MMOperationsQueue {
 
     var completionExpectation : XCTestExpectation?
 
-    override func addOperations(operations: [REDOperationProtocol]) {
+    override func addOperations(operations: [MMOperationProtocol]) {
         self.completionBlock = {
             self.completionExpectation?.fulfill()
         }

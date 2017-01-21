@@ -11,13 +11,13 @@ import UIKit
 class ViewController: UIViewController {
 
     var operations : [REDFetchTranslationOperation]?
-    var operationsQueue : REDOperationsQueue?
+    var operationsQueue : MMOperationsQueue?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-//        testOperations()
+        testOperations()
 
     }
 
@@ -27,16 +27,16 @@ class ViewController: UIViewController {
         let wordTyped = "laufen"
         var wordFirstLanguage : String = ""
 
-        operationsQueue = REDOperationsQueue()
+        operationsQueue = MMOperationsQueue()
         let fetchOperation1 = REDFetchTranslationOperation(word:wordTyped, defaultLanguage: firstLanguage, fallbackLanguage: secondLanguage)!
         let fetchOperation2 = REDFetchTranslationOperation(word:wordTyped, defaultLanguage: secondLanguage, fallbackLanguage: firstLanguage)!
         fetchOperation2.successDependencies = [fetchOperation1]
-        fetchOperation2.dependencies = [fetchOperation1]
 
         let fetchOperation3 = REDSyncTestOperation()!
         fetchOperation3.dependencies = [fetchOperation2]
         operationsQueue?.completionBlock = {
             self.operationsQueue = nil
+            print("operations finished")
         }
         operationsQueue?.addOperations(operations: [fetchOperation1, fetchOperation2, fetchOperation3])
 
