@@ -4,5 +4,4 @@ class REDUserSession {
 
     var currentWord : REDWord?
 
-
 }

@@ -21,11 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window = UIWindow(frame:UIScreen.main.bounds)
 
-        let vc = REDInputWordViewController(nibName: "REDInputWordView", bundle: nil)
-        vc.inputWordViewModel = REDInputWordViewModel(userSession: REDGlobalModels.sharedInstance.userSession)
+        let storyBoard = UIStoryboard(name:"Main", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         let nav = UINavigationController(rootViewController:vc)
         nav.setNavigationBarHidden(true, animated: false)
         self.window?.rootViewController = nav
+        self.window?.makeKeyAndVisible()
 
         return true
     }
