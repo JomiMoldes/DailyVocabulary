@@ -12,6 +12,7 @@
 		45BAF3E12C0E20AC514A8690 /* REDUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFE7A34420EC6872598E5 /* REDUserSession.swift */; };
 		45BAF70A5C30A0903465AF3B /* REDInputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF5538BAF82C4D3017BC7 /* REDInputWordView.swift */; };
 		45BAF766F8E0AF8BFD1C84FB /* RedInputWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF400FFAF7F709BB8AEC9 /* RedInputWordViewModel.swift */; };
+		45BAFD0A55FCA78C33248297 /* REDFetchConjugationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF87E929F6811DF7EF183 /* REDFetchConjugationOperation.swift */; };
 		45BAFD81FD0421DF93906D02 /* REDWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFE32E71F846E83A43472 /* REDWord.swift */; };
 		486C6B4B1E325A7400F85011 /* MMOperationsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B451E325A7400F85011 /* MMOperationsQueue.swift */; };
 		486C6B4C1E325A7400F85011 /* MMAsynchronousExampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		45BAF400FFAF7F709BB8AEC9 /* RedInputWordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedInputWordViewModel.swift; sourceTree = "<group>"; };
 		45BAF5538BAF82C4D3017BC7 /* REDInputWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordView.swift; sourceTree = "<group>"; };
+		45BAF87E929F6811DF7EF183 /* REDFetchConjugationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDFetchConjugationOperation.swift; sourceTree = "<group>"; };
 		45BAFBD17C7408D560C4AD56 /* REDInputWordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = REDInputWordView.xib; sourceTree = "<group>"; };
 		45BAFD48CE48CEE7E3300FFE /* REDGlobalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDGlobalModels.swift; sourceTree = "<group>"; };
 		45BAFE32E71F846E83A43472 /* REDWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDWord.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				486C6B481E325A7400F85011 /* MMOperationProtocol.swift */,
 				486C6B491E325A7400F85011 /* MMSyncExampleOperation.swift */,
 				486C6B4A1E325A7400F85011 /* MMSyncOperation.swift */,
+				45BAF87E929F6811DF7EF183 /* REDFetchConjugationOperation.swift */,
 			);
 			path = operations;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				45BAF001F03AAB81A1E50C69 /* REDGlobalModels.swift in Sources */,
 				45BAF766F8E0AF8BFD1C84FB /* RedInputWordViewModel.swift in Sources */,
 				45BAF70A5C30A0903465AF3B /* REDInputWordView.swift in Sources */,
+				45BAFD0A55FCA78C33248297 /* REDFetchConjugationOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

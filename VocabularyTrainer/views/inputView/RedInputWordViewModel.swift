@@ -18,9 +18,19 @@ class REDInputWordViewModel {
         let word = userSession.currentWord!
         let translation1 = REDFetchTranslationOperation(word: word, defaultLanguage: "de", fallbackLanguage: "en")!
         let translation2 = REDFetchTranslationOperation(word: word, defaultLanguage: "en", fallbackLanguage: "de")!
+        translation2.executionCondition = {
+            let success = word.translation != ""
+            return success
+        }
         translation2.dependencies = [translation1]
+        let conjugation = REDFetchConjugationOperation(word: word, language: "de")!
+        conjugation.dependencies = [translation1, translation2]
 
-        operationQueue.addOperations(operations: [translation1, translation2])
+        operationQueue.completionBlock = {
+            print("operations FINISHED")
+        }
+
+        operationQueue.addOperations(operations: [translation1, translation2, conjugation])
 
     }
     

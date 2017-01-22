@@ -1,40 +1,29 @@
-//
-// Created by MIGUEL MOLDES on 11/1/17.
-// Copyright (c) 2017 MIGUEL MOLDES. All rights reserved.
-//
-
 import Foundation
 
-class REDFetchTranslationOperation : MMOperationProtocol {
+class REDFetchConjugationOperation : MMOperationProtocol {
 
     var operation: Operation
-
-    var word : REDWord!
-    let defaultLanguage : String
-    let fallbackLanguage : String
-    var translation : String?
-
     var dependencies = [MMOperationProtocol]()
     var successDependencies = [MMOperationProtocol]()
 
-    var executionCondition : (()->Bool)?
+    var word : REDWord!
+    let language : String
 
-    init?(word:REDWord, defaultLanguage:String, fallbackLanguage:String){
+    init?(word:REDWord, language:String) {
         self.word = word
-        self.defaultLanguage = defaultLanguage
-        self.fallbackLanguage = fallbackLanguage
+        self.language = language
         self.operation = MMAsynchronousOperation()
         (self.operation as! MMAsynchronousOperation).delegate = self
     }
 
     func execute() {
-        if self.executionCondition != nil && self.executionCondition!() {
+        guard word.isVerb else {
             self.operation.cancel()
             (self.operation as! MMAsynchronousOperation).finishOperation()
             return
         }
 
-        let url = URL(string:"http://api.ultralingua.com/api/definitions/\(self.defaultLanguage)/\(self.fallbackLanguage)/\(self.word.word!)")!
+        let url = URL(string:"http://api.ultralingua.com/api/conjugations/\(self.language)/\(self.word.word!)")!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             guard error == nil else {
@@ -54,16 +43,17 @@ class REDFetchTranslationOperation : MMOperationProtocol {
             let json = try? JSONSerialization.jsonObject(with: data, options:[])
 
 
-            print(json)
-            print("-------------")
             if let list = json as? [Any] {
-                self.word.setupTranslation(json:list)
+                self.word.setupConjugation(json:list)
             }
 
             (self.operation as! MMAsynchronousOperation).finishOperation()
         }
 
         task.resume()
+
+
+
     }
 
 

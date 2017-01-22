@@ -5,7 +5,7 @@
 
 import Foundation
 
-struct REDWord {
+class REDWord {
 
     var word : String!
     var translation : String!
@@ -23,8 +23,7 @@ struct REDWord {
     }
 
 
-    mutating func setupTranslation(json:[Any]) {
-
+    func setupTranslation(json:[Any]) {
         if let elements = json[0] as? [String:Any] {
             self.translation = elements["text"] as! String
             if let grammar = elements["partofspeech"] as? [String:Any] {
@@ -32,8 +31,10 @@ struct REDWord {
             }
 
         }
+    }
 
-
+    func setupConjugation(json:[Any]) {
+        print("setupConjugation")
     }
 
 }
