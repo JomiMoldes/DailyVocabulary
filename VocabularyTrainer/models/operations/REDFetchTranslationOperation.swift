@@ -9,7 +9,7 @@ class REDFetchTranslationOperation : MMOperationProtocol {
 
     var operation: Operation
 
-    let word : String
+    var word : REDWord!
     let defaultLanguage : String
     let fallbackLanguage : String
     var translation : String?
@@ -17,7 +17,7 @@ class REDFetchTranslationOperation : MMOperationProtocol {
     var dependencies = [MMOperationProtocol]()
     var successDependencies = [MMOperationProtocol]()
 
-    init?(word:String, defaultLanguage:String, fallbackLanguage:String){
+    init?(word:REDWord, defaultLanguage:String, fallbackLanguage:String){
         self.word = word
         self.defaultLanguage = defaultLanguage
         self.fallbackLanguage = fallbackLanguage
@@ -26,7 +26,7 @@ class REDFetchTranslationOperation : MMOperationProtocol {
     }
 
     func execute() {
-        let url = URL(string:"http://api.ultralingua.com/api/definitions/\(self.defaultLanguage)/\(self.fallbackLanguage)/\(self.word)")!
+        let url = URL(string:"http://api.ultralingua.com/api/definitions/\(self.defaultLanguage)/\(self.fallbackLanguage)/\(self.word.word!)")!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             guard error == nil else {
@@ -43,9 +43,15 @@ class REDFetchTranslationOperation : MMOperationProtocol {
                 return
             }
 
-            _ = try? JSONSerialization.jsonObject(with: data, options:[])
+            let json = try? JSONSerialization.jsonObject(with: data, options:[])
 
-            print("json")
+
+            print(json)
+            print("-------------")
+            if let list = json as? [Any] {
+                self.word.setupTranslation(json:list)
+            }
+
             (self.operation as! MMAsynchronousOperation).finishOperation()
         }
 

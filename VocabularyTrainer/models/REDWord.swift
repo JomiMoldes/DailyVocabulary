@@ -7,15 +7,33 @@ import Foundation
 
 struct REDWord {
 
-    let word : String
+    var word : String!
     var translation : String!
     var isVerb = true
     var article : String?
-    var preterite : String?
+    var past : String?
     var participle : String?
 
     init?(json:[String:Any], wordName: String) {
         self.word = wordName
-        print("json:", json)
     }
+
+    init?(wordName:String){
+        self.word = wordName
+    }
+
+
+    mutating func setupTranslation(json:[Any]) {
+
+        if let elements = json[0] as? [String:Any] {
+            self.translation = elements["text"] as! String
+            if let grammar = elements["partofspeech"] as? [String:Any] {
+                self.isVerb = (grammar["partofspeechcategory"] as! String) == "verb" ? true : false
+            }
+
+        }
+
+
+    }
+
 }

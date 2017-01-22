@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45BAF001F03AAB81A1E50C69 /* REDGlobalModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFD48CE48CEE7E3300FFE /* REDGlobalModels.swift */; };
+		45BAF18CC79F2A58226F1155 /* REDInputWordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BAFBD17C7408D560C4AD56 /* REDInputWordView.xib */; };
+		45BAF3E12C0E20AC514A8690 /* REDUserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFE7A34420EC6872598E5 /* REDUserSession.swift */; };
+		45BAF70A5C30A0903465AF3B /* REDInputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF5538BAF82C4D3017BC7 /* REDInputWordView.swift */; };
+		45BAF766F8E0AF8BFD1C84FB /* RedInputWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAF400FFAF7F709BB8AEC9 /* RedInputWordViewModel.swift */; };
 		45BAFD81FD0421DF93906D02 /* REDWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BAFE32E71F846E83A43472 /* REDWord.swift */; };
 		486C6B4B1E325A7400F85011 /* MMOperationsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B451E325A7400F85011 /* MMOperationsQueue.swift */; };
 		486C6B4C1E325A7400F85011 /* MMAsynchronousExampleOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */; };
@@ -18,13 +23,10 @@
 		486C6B541E325AA200F85011 /* MMOperationsQueueTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B521E325AA200F85011 /* MMOperationsQueueTest.swift */; };
 		486C6B571E325AF500F85011 /* REDFetchTranslationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B551E325AF500F85011 /* REDFetchTranslationOperation.swift */; };
 		486C6B581E325AF500F85011 /* REDSyncTestOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B561E325AF500F85011 /* REDSyncTestOperation.swift */; };
-		486C6B5A1E33B1C700F85011 /* REDInputWordView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 486C6B591E33B1C700F85011 /* REDInputWordView.xib */; };
 		486C6B5C1E33B1EF00F85011 /* REDInputWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5B1E33B1EF00F85011 /* REDInputWordViewController.swift */; };
-		486C6B5E1E33B22600F85011 /* REDInputWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5D1E33B22600F85011 /* REDInputWordView.swift */; };
-		486C6B601E33B25F00F85011 /* RedInputWordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */; };
+		486C6B621E34A74300F85011 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 486C6B611E34A74300F85011 /* Main.storyboard */; };
 		4888032A1E23FD8F00DAA55E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488803291E23FD8F00DAA55E /* AppDelegate.swift */; };
 		4888032C1E23FD8F00DAA55E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4888032B1E23FD8F00DAA55E /* ViewController.swift */; };
-		4888032F1E23FD8F00DAA55E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4888032D1E23FD8F00DAA55E /* Main.storyboard */; };
 		488803321E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 488803301E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodeld */; };
 		488803341E23FD8F00DAA55E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488803331E23FD8F00DAA55E /* Assets.xcassets */; };
 		488803371E23FD8F00DAA55E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488803351E23FD8F00DAA55E /* LaunchScreen.storyboard */; };
@@ -43,7 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45BAF400FFAF7F709BB8AEC9 /* RedInputWordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedInputWordViewModel.swift; sourceTree = "<group>"; };
+		45BAF5538BAF82C4D3017BC7 /* REDInputWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordView.swift; sourceTree = "<group>"; };
+		45BAFBD17C7408D560C4AD56 /* REDInputWordView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = REDInputWordView.xib; sourceTree = "<group>"; };
+		45BAFD48CE48CEE7E3300FFE /* REDGlobalModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDGlobalModels.swift; sourceTree = "<group>"; };
 		45BAFE32E71F846E83A43472 /* REDWord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDWord.swift; sourceTree = "<group>"; };
+		45BAFE7A34420EC6872598E5 /* REDUserSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDUserSession.swift; sourceTree = "<group>"; };
 		486C6B451E325A7400F85011 /* MMOperationsQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationsQueue.swift; sourceTree = "<group>"; };
 		486C6B461E325A7400F85011 /* MMAsynchronousExampleOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAsynchronousExampleOperation.swift; sourceTree = "<group>"; };
 		486C6B471E325A7400F85011 /* MMAsynchronousOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAsynchronousOperation.swift; sourceTree = "<group>"; };
@@ -54,14 +61,11 @@
 		486C6B521E325AA200F85011 /* MMOperationsQueueTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMOperationsQueueTest.swift; sourceTree = "<group>"; };
 		486C6B551E325AF500F85011 /* REDFetchTranslationOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDFetchTranslationOperation.swift; sourceTree = "<group>"; };
 		486C6B561E325AF500F85011 /* REDSyncTestOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDSyncTestOperation.swift; sourceTree = "<group>"; };
-		486C6B591E33B1C700F85011 /* REDInputWordView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = REDInputWordView.xib; sourceTree = "<group>"; };
 		486C6B5B1E33B1EF00F85011 /* REDInputWordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordViewController.swift; sourceTree = "<group>"; };
-		486C6B5D1E33B22600F85011 /* REDInputWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REDInputWordView.swift; sourceTree = "<group>"; };
-		486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedInputWordViewModel.swift; sourceTree = "<group>"; };
+		486C6B611E34A74300F85011 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		488803261E23FD8F00DAA55E /* VocabularyTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VocabularyTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488803291E23FD8F00DAA55E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4888032B1E23FD8F00DAA55E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4888032E1E23FD8F00DAA55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		488803311E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VocabularyTrainer.xcdatamodel; sourceTree = "<group>"; };
 		488803331E23FD8F00DAA55E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		488803361E23FD8F00DAA55E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -113,9 +117,7 @@
 		45BAF69F722250B8F5FB15F6 /* views */ = {
 			isa = PBXGroup;
 			children = (
-				486C6B591E33B1C700F85011 /* REDInputWordView.xib */,
-				486C6B5D1E33B22600F85011 /* REDInputWordView.swift */,
-				486C6B5F1E33B25F00F85011 /* RedInputWordViewModel.swift */,
+				45BAFF26BFAA02B7388CCED3 /* inputView */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -156,8 +158,20 @@
 			children = (
 				45BAFE32E71F846E83A43472 /* REDWord.swift */,
 				45BAFA8D7D173C8FAF236268 /* operations */,
+				45BAFE7A34420EC6872598E5 /* REDUserSession.swift */,
+				45BAFD48CE48CEE7E3300FFE /* REDGlobalModels.swift */,
 			);
 			path = models;
+			sourceTree = "<group>";
+		};
+		45BAFF26BFAA02B7388CCED3 /* inputView */ = {
+			isa = PBXGroup;
+			children = (
+				45BAF400FFAF7F709BB8AEC9 /* RedInputWordViewModel.swift */,
+				45BAFBD17C7408D560C4AD56 /* REDInputWordView.xib */,
+				45BAF5538BAF82C4D3017BC7 /* REDInputWordView.swift */,
+			);
+			path = inputView;
 			sourceTree = "<group>";
 		};
 		4888031D1E23FD8F00DAA55E = {
@@ -183,9 +197,9 @@
 		488803281E23FD8F00DAA55E /* VocabularyTrainer */ = {
 			isa = PBXGroup;
 			children = (
+				486C6B611E34A74300F85011 /* Main.storyboard */,
 				488803291E23FD8F00DAA55E /* AppDelegate.swift */,
 				4888032B1E23FD8F00DAA55E /* ViewController.swift */,
-				4888032D1E23FD8F00DAA55E /* Main.storyboard */,
 				488803331E23FD8F00DAA55E /* Assets.xcassets */,
 				488803351E23FD8F00DAA55E /* LaunchScreen.storyboard */,
 				488803381E23FD8F00DAA55E /* Info.plist */,
@@ -306,8 +320,8 @@
 			files = (
 				488803371E23FD8F00DAA55E /* LaunchScreen.storyboard in Resources */,
 				488803341E23FD8F00DAA55E /* Assets.xcassets in Resources */,
-				4888032F1E23FD8F00DAA55E /* Main.storyboard in Resources */,
-				486C6B5A1E33B1C700F85011 /* REDInputWordView.xib in Resources */,
+				486C6B621E34A74300F85011 /* Main.storyboard in Resources */,
+				45BAF18CC79F2A58226F1155 /* REDInputWordView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,20 +388,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				4888032C1E23FD8F00DAA55E /* ViewController.swift in Sources */,
-				486C6B5E1E33B22600F85011 /* REDInputWordView.swift in Sources */,
 				486C6B4E1E325A7400F85011 /* MMOperationProtocol.swift in Sources */,
 				486C6B4B1E325A7400F85011 /* MMOperationsQueue.swift in Sources */,
 				486C6B571E325AF500F85011 /* REDFetchTranslationOperation.swift in Sources */,
 				486C6B4F1E325A7400F85011 /* MMSyncExampleOperation.swift in Sources */,
 				486C6B501E325A7400F85011 /* MMSyncOperation.swift in Sources */,
 				486C6B5C1E33B1EF00F85011 /* REDInputWordViewController.swift in Sources */,
-				486C6B601E33B25F00F85011 /* RedInputWordViewModel.swift in Sources */,
 				486C6B4C1E325A7400F85011 /* MMAsynchronousExampleOperation.swift in Sources */,
 				4888032A1E23FD8F00DAA55E /* AppDelegate.swift in Sources */,
 				486C6B4D1E325A7400F85011 /* MMAsynchronousOperation.swift in Sources */,
 				488803321E23FD8F00DAA55E /* VocabularyTrainer.xcdatamodeld in Sources */,
 				486C6B581E325AF500F85011 /* REDSyncTestOperation.swift in Sources */,
 				45BAFD81FD0421DF93906D02 /* REDWord.swift in Sources */,
+				45BAF3E12C0E20AC514A8690 /* REDUserSession.swift in Sources */,
+				45BAF001F03AAB81A1E50C69 /* REDGlobalModels.swift in Sources */,
+				45BAF766F8E0AF8BFD1C84FB /* RedInputWordViewModel.swift in Sources */,
+				45BAF70A5C30A0903465AF3B /* REDInputWordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,14 +428,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4888032D1E23FD8F00DAA55E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4888032E1E23FD8F00DAA55E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		488803351E23FD8F00DAA55E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

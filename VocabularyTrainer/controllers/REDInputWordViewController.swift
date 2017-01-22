@@ -16,5 +16,8 @@ class REDInputWordViewController : UIViewController {
         inputWordView.model = inputWordViewModel
     }
 
+    @IBAction func doneTouched(_ sender: UIButton) {
+        inputWordViewModel.searchWord(word: inputWordView.insertLabel.text!)
+    }
 
 }

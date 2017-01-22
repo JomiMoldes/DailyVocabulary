@@ -17,11 +17,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        testOperations()
+//        testOperations()
 
     }
 
-    func testOperations(){
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+
+    }
+
+
+   /* func testOperations(){
         let firstLanguage = "de"
         let secondLanguage = "en"
         let wordTyped = "laufen"
@@ -40,7 +47,7 @@ class ViewController: UIViewController {
         }
         operationsQueue?.addOperations(operations: [fetchOperation1, fetchOperation2, fetchOperation3])
 
-    }
+    }    */
 
 
     override func didReceiveMemoryWarning() {

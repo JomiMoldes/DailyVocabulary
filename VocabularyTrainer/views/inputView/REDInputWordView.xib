@@ -11,12 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="REDInputWordViewController" customModule="VocabularyTrainer" customModuleProvider="target">
             <connections>
-                <outlet property="doneButton" destination="1TS-kt-iVO" id="tZu-vF-JlB"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Zkp-OP-ilb"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="REDInputWordView" customModule="VocabularyTrainer" customModuleProvider="target">
+        <view contentMode="scaleToFill" restorationIdentifier="REDInputWordView" id="iN0-l3-epB" customClass="REDInputWordView" customModule="VocabularyTrainer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -49,12 +48,15 @@
                     <state key="normal" title="DONE">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="doneTouched:" destination="-1" eventType="touchUpInside" id="22Y-nO-cou"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="conjugationLabel" destination="yl6-Kt-HHT" id="3JE-5c-Z8o"/>
-                <outlet property="doneButton" destination="1TS-kt-iVO" id="K0k-aB-i33"/>
+                <outlet property="doneButton" destination="1TS-kt-iVO" id="BJd-H2-owY"/>
                 <outlet property="insertLabel" destination="CG8-tZ-7gx" id="121-hC-LvX"/>
                 <outlet property="resultLabel" destination="fKc-yY-HfF" id="jzq-MO-e0Q"/>
             </connections>
